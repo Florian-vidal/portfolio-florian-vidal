@@ -23,57 +23,51 @@ skills.forEach((skill) => {
 // Liste de projets à afficher
 const projets = [
   {
-    titre: "To-Do List",
-    description: "Une application simple en JavaScript pour gérer ses tâches.",
-    lien: "https://sage-souffle-58b78a.netlify.app/",
+    titre:
+      "Création site pour mon ancienne société : Boutique spécialisée dans le CBD",
+    description:
+      "Il s'agit d'une boutique en ligne qui gère les clients, les commandes, mes produits, codes promos, points de fidélité, inventaire, modes de livraison, modes de paiement.",
+    date: "Date de création : Janvier 2021",
+    type: "Type de projet : projet professionnel",
+    techno: "Technos utilisées : Wordpress, PHP",
+    lien: "https://www.evasioncbd.com/",
   },
   {
-    titre: "Mini CV interactif",
-    description: "Une page personnelle responsive avec génération dynamique.",
-    lien: "#",
+    titre: "Site blog pour un réalisateur, producteur, médias",
+    description:
+      "M.Pichoff fait des courts métrages et participe à des évènements liés au monde du cinéma. Il souhaitait un site web qui puisse à la fois mettre en valeur son activité, son profil de réalisateur-producteur et de pouvoir centrer sa visibilité sur internet. Le site a été développé sous Wordpress.",
+    date: "Date de création : Juin 2020",
+    type: "Type de projet : commande pour un client",
+    techno: "Technos utilisées : Wordpress",
+    lien: "https://www.mathieupichoff.com/",
   },
   {
-    titre: "Clone de Vinted",
-    description: "Projet React avec authentification et paiements (fictifs).",
-    lien: "#",
+    titre: "Site vitrine d'un cabinet paramédical",
+    description:
+      "Ce projet web est un site vitrine qui présente les différents services ainsi que l'équipe en charge d'un cabinet paramédical situé à La Teste-de-Buch. Une visite virtuelle, un bon référencement et un design épuré ont été les priorités voulues par le client.",
+    date: "Date de création : Mai 2020",
+    type: "Type de projet : commande pour un client",
+    techno: "Technos utilisées : PHP, Bootstrap",
+    lien: "https://www.cabinetcazaux.fr/",
   },
+
   {
-    titre: "Application pour s'entraîner : Agence immobilière",
-    description: "Une application ludo-éducative pour enfants",
-    lien: "www.agence-immo-site.com",
-  },
-  {
-    titre: "Jeu intéractif : Les Zaniméo",
-    description: "Une application ludo-éducative pour enfants, créé ",
+    titre: "Plateforme d'apprentissage pour enfants : Les Zaniméo",
+    description:
+      "Ce projet est né d'une envie de proposer une application à mi-chemin entre un support d'apprentissage et un jeu interactif et sonore dans le domaine des animaux pour enfants. Après avoir parcouru le site, l'enfant peut participer au Quiz pour y tester ce qu'il a appris. Son score avec un diplôme numérique lui est envoyé par mail.",
+    date: "Date de création : Août 2019",
+    type: "Type de projet : projet de fin de bootcamp pour obtenir le titre RNCP dre niveau 5",
+    techno: "Technos utilisées : PHP, Symfony, JavaScript",
     lien: "https://leszanimeo.com/",
   },
   {
-    titre: "Site pour collectionneurs : DBZ Museum Collection",
+    titre: "Site de partage pour collectionneurs : DBZ Museum Collection",
     description:
       "Projet qui a pour but de rendre hommage à une licence culte des années 90, j'ai nommé le manga Dragon Ball. Ce site a été pensé et élaboré selon une l'idée d'un musée qui référence les objets que l'on trouvait sur cette licence en France.",
-    date: "Janvier 2019",
+    date: "Date de création : Janvier 2019",
+    type: "Type de projet : Projet personnel",
+    techno: "Technos utilisées : WIX - No code",
     lien: "https://dbzmuseumcollection.wixsite.com/website-1",
-  },
-  {
-    titre: "Librairie : Le Cercle Des Poètes",
-    description: "Une application ludo-éducative pour enfants, créé ",
-    lien: "www.le-cercle-des-poetes.com",
-  },
-  {
-    titre: "Commande client : Cabinet Kiné-Massage-Ostéo",
-    description: "Une application ludo-éducative pour enfants, créé ",
-    lien: "www.cabinetcazaux.fr",
-  },
-  {
-    titre: "Commande client : Réalisateur, producteur, médias",
-    description: "Une application ludo-éducative pour enfants, créé ",
-    lien: "www.mathieupichoff.com",
-  },
-  {
-    titre:
-      "Création site pour mon ancienne société : Boutique spécialisée dans le CBD",
-    description: "Une application ludo-éducative pour enfants, créé ",
-    lien: "www.evasioncbd.com",
   },
 ];
 
@@ -94,6 +88,12 @@ projets.forEach((projet) => {
   const date = document.createElement("p");
   date.textContent = projet.date;
 
+  const type = document.createElement("p");
+  type.textContent = projet.type;
+
+  const techno = document.createElement("p");
+  techno.textContent = projet.techno;
+
   const link = document.createElement("a");
   link.href = projet.lien;
   link.textContent = "Voir le projet";
@@ -103,6 +103,8 @@ projets.forEach((projet) => {
   card.appendChild(title);
   card.appendChild(desc);
   card.appendChild(date);
+  card.appendChild(type);
+  card.appendChild(techno);
   card.appendChild(link);
 
   // On ajoute la carte au conteneur
