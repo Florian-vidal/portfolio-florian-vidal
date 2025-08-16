@@ -38,6 +38,11 @@ const projets = [
         description: "Projet React avec authentification et paiements (fictifs).",
         lien: "#"
     }
+    {
+        titre: "Les Zaniméo",
+        description: "Une application ludo-éducative pour enfants",
+        lien: "https://leszanimeo.com/"
+     },
 ];
 
 // On sélectionne la <div> vide où afficher les projets
