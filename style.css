@@ -1,0 +1,53 @@
+/* Style global du corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Haut de page (nom, titre) */
+header {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Image de profil arrondie */
+.avatar {
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 10px;
+}
+
+/* Bloc de chaque section */
+section {
+  padding: 20px;
+  background: white;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+/* Titre des sections */
+h3 {
+  color: #0077cc;
+}
+
+/* Pied de page discret */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 20px;
+}
+
+/* Style pour chaque projet */
+.project-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: #fafafa;
+}
