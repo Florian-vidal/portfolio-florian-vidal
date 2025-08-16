@@ -60,3 +60,33 @@ footer {
 .img-portfolio img {
   width: 100%;
 }
+
+#projectsList {
+  display: flex;
+  /* background: yellow; */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.project-card {
+  /* background: pink; */
+  width: 300px;
+}
+
+body {
+  width: 1135px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.projects-picture {
+  width: 100px;
+}
+
+.projects-picture img {
+  width: 100%;
+}
