@@ -10,13 +10,13 @@ body {
   background: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  
 }
 
 main {
   min-height: 80vh;
   padding: 2rem;
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
 
