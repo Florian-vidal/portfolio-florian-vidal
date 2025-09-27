@@ -1,20 +1,31 @@
 // Import de Framer Motion pour ajouter des animations
 import { motion } from "framer-motion";
 
-// Déclaration du composant ProjectCard qui reçoit 6 props : title, description, date, type, stack et link (destructuring)
-function ProjectCard({ title, description, date, type, stack, link }) {
+// Déclaration du composant ProjectCard qui reçoit 7 props de Projects.jsx : overview, title, description, date, type, stack et link (destructuring)
+function ProjectCard({
+  overview,
+  title,
+  description,
+  date,
+  type,
+  stack,
+  link,
+}) {
   return (
     // Bloc principal animé avec Framer Motion
     <motion.div
       className="project-card"
       whileHover={{ scale: 1.01 }} // Quand on survole la card avec la souris → zoom léger (scale 101%)
     >
+      {/* Image aperçue du projet */}
+      <img src={overview} alt="image aperçue du projet" className="overview" />
+
       {/* Titre du projet */}
       <h3>{title}</h3>
 
       {/* Description courte du projet */}
       <p>{description}</p>
-
+      <br />
       {/* Date de création du projet */}
       <p>{date}</p>
 
@@ -23,7 +34,7 @@ function ProjectCard({ title, description, date, type, stack, link }) {
 
       {/* Stacks utilisés lors du projet */}
       <p>{stack}</p>
-
+      <br />
       {/* Lien vers le projet */}
       <a href={link} target="_blank">
         Voir le projet
