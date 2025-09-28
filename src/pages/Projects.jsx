@@ -33,7 +33,7 @@ const projects = [
     date: "Créé en août 2025",
     type: "Type de projet : projet personnel",
     stack: "Technos : React, Tailwind, Netlify",
-    link: "https://toolkitwebdev.netlify.app/category/react",
+    link: "https://toolkitwebdev.netlify.app/",
   },
   {
     overview: "/tedvin.png",
