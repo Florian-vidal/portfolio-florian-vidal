@@ -41,7 +41,7 @@ const projects = [
     description:
       "Plateforme e-commerce avec gestion d'annonces et paiement Stripe, authentification, hébergement des images",
     date: "Créé en août 2025",
-    type: "bootcamp Le Reacteur",
+    type: "Type de projet : bootcamp Le Reacteur",
     stack:
       "Technos : React, Node.js, Express, MongoDB, Cloudinary, Northflank, Netlify, Stripe",
     link: "https://tedvin-florian-vidal.netlify.app/",
