@@ -36,7 +36,7 @@ function About() {
 
         {/* Paragraphe 3 : mes objectifs */}
         <p>
-          Je recherche une <strong>alternance</strong> pour mettre mes compétences en
+          Je recherche une <strong>alternance</strong> aux alentours de bordeaux pour mettre mes compétences en
           pratique, progresser dans un environnement stimulant et contribuer à des
           projets concrets.
         </p>
