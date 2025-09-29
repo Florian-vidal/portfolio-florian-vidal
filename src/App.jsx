@@ -2,11 +2,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Import des composants de mon portfolio
-import Navbar from "./components/Navbar";   // Barre de navigation
-import Home from "./pages/Home";            // Page d’accueil
-import Projects from "./pages/Projects";    // Page Projets
-import Contact from "./pages/Contact";      // Page Contact
-import Footer from "./components/Footer";   // Pied de page
+import Navbar from "./components/Navbar"; // Barre de navigation
+import Home from "./pages/Home"; // Page d’accueil
+import Projects from "./pages/Projects"; // Page Projets
+import CVpdf from "./pages/CV"; // Page du CV
+import Contact from "./pages/Contact"; // Page Contact
+import Footer from "./components/Footer"; // Pied de page
 
 // Import du fichier CSS global
 import "./index.css";
@@ -27,6 +28,7 @@ function App() {
               - "/contact" → page contact */}
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/cv" element={<CVpdf />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

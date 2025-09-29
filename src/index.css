@@ -1,4 +1,5 @@
 /* ========== RESET GLOBAL ========== */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,63 +7,127 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  font-family: system-ui, sans-serif; 
+  background: #f9f9f9; 
+  color: #333; 
+  line-height: 1.6; 
 }
 
 main {
-  min-height: 80vh;
-  padding: 2rem;
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
+  min-height: 90vh;     
+  padding: 2rem;      
+  max-width: 1440px;     
+  width: 100%;          
+  margin: 0 auto;     
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ========== NAVBAR ========== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;                       
+  justify-content: space-between;    
+  align-items: center;               
   padding: 1rem 2rem;
-  background: #222;
-  color: #fff;
+  background: #222;                   
+  color: #fff;                         
+  border-bottom: 3px solid #10b881;  
 }
 
+/* Style du logo */
 .navbar .logo {
   font-size: 0.8rem;
   font-weight: bold;
-  align-items: center;
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 2rem; 
 }
 
 .navbar .logo .img {
   width: 100%;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
+/* Liens de la navbar */
 .navbar a {
   color: #fff;
-  text-decoration: none;
   transition: color 0.2s;
+  position: relative;
 }
 
+/* Couleur au hover */
 .navbar a:hover {
   color: #10b881;
+}
+
+/* Effet soulignement animé au hover */
+.navbar ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b881, #417ff5);
+  transition: width 0.3s;
+}
+
+.navbar ul a:hover::after {
+  width: 100%;
+}
+
+/* Liens du menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  padding-bottom: 3px; 
+}
+
+/* Soulignement en dégradé animé */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b881, #417ff5);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Lien actif (page courante) */
+.nav-links a.active {
+  color: #10b881;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Bouton burger (mobile) */
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* ========== HERO / HOME ========== */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #10b881, #417ff5);
+  background: linear-gradient(135deg, #10b881, #417ff5); 
   color: #fff;
   border-radius: 8px;
 }
@@ -78,7 +143,7 @@ main {
   font-size: 1.1rem;
 }
 
-/* ========== HERO IMAGE ========== */
+/* Contenu du hero (photo + texte) */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -89,13 +154,13 @@ main {
 .hero-img {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
+  border-radius: 50%; 
   border: 3px solid #fff;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== Bouton Call to action -> Projets ========== */
+/* Bouton d’appel à l’action */
 .btn-primary {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -103,7 +168,6 @@ main {
   color: #417ff5;
   font-weight: bold;
   border-radius: 25px;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -147,7 +211,7 @@ main {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); 
 }
 
 .skill-card p {
@@ -188,6 +252,7 @@ main {
 
 .projects h2 {
   margin-bottom: 2rem;
+  color: #417ff5;
 }
 
 .projects-grid {
@@ -220,12 +285,44 @@ main {
 
 .project-card a {
   color: #10b881;
-  text-decoration: none;
   font-weight: bold;
 }
 
 .project-card a:hover {
   text-decoration: underline;
+}
+
+/* ========== CV ========== */
+.cv-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv-container h2 {
+  margin-bottom: 1rem;
+  color: #417ff5;
+}
+
+.btn-download {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: #10b881;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-download:hover {
+  background: #0d946f;
+}
+
+.cv {
+  border: 2px solid grey;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* ========== CONTACT ========== */
@@ -236,7 +333,8 @@ main {
 }
 
 .contact h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: #417ff5;
 }
 
 .contact p {
@@ -245,12 +343,18 @@ main {
 
 .contact a {
   color: #10b881;
-  text-decoration: none;
   font-weight: bold;
 }
 
 .contact a:hover {
   text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* ========== FOOTER ========== */
@@ -260,4 +364,35 @@ main {
   background: #222;
   color: #fff;
   font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  /* Réduire le titre */
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+
+  /* Cacher le menu par défaut */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #222;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Afficher quand ouvert */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Montrer le bouton burger */
+  .burger {
+    display: block;
+  }
 }
